@@ -18,6 +18,14 @@ public class FrontBackPanel extends Composite {
 
 	private boolean isFront = true;
 
+	public boolean isBackVisible() {
+		return !isFront;
+	}
+
+	public boolean isFrontVisible() {
+		return isFront;
+	}
+
 	public FrontBackPanel() {
 		initWidget(panel);
 	}
@@ -89,4 +97,5 @@ public class FrontBackPanel extends Composite {
 		s.setProperty("backfaceVisibility", "hidden");
 		s.setProperty("WebkitBackfaceVisibility", "hidden");
 	}
+
 }

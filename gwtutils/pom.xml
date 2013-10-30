@@ -6,7 +6,16 @@
 	<artifactId>gwtUtils</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Utils for GWT</name>
+	<description>Some Utils for GWT</description>
+	<url>http://code.google.com/p/gwtutils/</url>
 
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 

@@ -3,7 +3,7 @@
 
 	<groupId>com.googlecode.gwtutils</groupId>
 	<artifactId>gwtUtils</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>Utils for GWT</name>
 	<description>Some Utils for GWT</description>
 	<url>http://code.google.com/p/gwtutils/</url>
@@ -26,7 +26,7 @@
 		<connection>scm:git:https://code.google.com/p/gwtutils/</connection>
 		<developerConnection>scm:git:https://code.google.com/p/gwtutils/</developerConnection>
 		<url>https://code.google.com/p/gwtutils/</url>
-		<tag>gwtUtils-0.0.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>

@@ -28,7 +28,7 @@ public abstract class AbstractEntryPoint implements EntryPoint {
 			public void onUncaughtException(Throwable e) {
 				// TODO Send via GWT-Logging
 				e.printStackTrace();
-				onUncaughtException(e);
+				AbstractEntryPoint.this.onUncaughtException(e);
 			}
 		});
 		if (GWT.isProdMode())

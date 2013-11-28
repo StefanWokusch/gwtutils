@@ -1,6 +1,7 @@
 .container {
 	border: 1px solid #ccc;
 	min-height: 24px;
+	text-align: left;
 }
 
 .container>div {
@@ -22,6 +23,7 @@
 }
 
 .tag {
+	line-height: 16px;
 	border: 1px solid #BBBBBB;
 	border-radius: 3px;
 	cursor: default;
@@ -29,6 +31,7 @@
 	padding: 2px 25px 2px 5px;
 	font-size: small;
 	position: relative;
+	border: 1px solid #BBBBBB;
 }
 
 .tagName {

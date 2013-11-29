@@ -228,9 +228,9 @@ public class TagWidget extends Composite implements HasValue<String> {
 				tagWidget.add(name);
 
 				HTML tagDeleteButton = new HTML();
-				tagDeleteButton.setStyleName(style.tagDeleteButton());
 				tagWidget.add(tagDeleteButton);
-				tagWidget.addDomHandler(new ClickHandler() {
+				tagDeleteButton.setStyleName(style.tagDeleteButton());
+				tagDeleteButton.addDomHandler(new ClickHandler() {
 					@Override
 					public void onClick(ClickEvent event) {
 						int start = value.indexOf(tag);

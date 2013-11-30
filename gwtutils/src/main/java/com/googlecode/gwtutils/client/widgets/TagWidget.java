@@ -116,8 +116,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 
 			@Override
 			public void onKeyDown(KeyDownEvent event) {
-				if (System.currentTimeMillis() - last > 100 && event.getNativeKeyCode() == KeyCodes.KEY_BACKSPACE
-						&& addTextBox.getValue().isEmpty()) {
+				if (System.currentTimeMillis() - last > 100 && event.getNativeKeyCode() == KeyCodes.KEY_BACKSPACE && addTextBox.getValue().isEmpty()) {
 					last = System.currentTimeMillis();
 					event.preventDefault();
 					event.stopPropagation();
@@ -179,7 +178,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 
 	@Override
 	public void setValue(String value, boolean fireEvents) {
-		this.value = value;
+		this.value = value == null ? "" : value;
 		refersh();
 		if (fireEvents)
 			ValueChangeEvent.fire(this, value);

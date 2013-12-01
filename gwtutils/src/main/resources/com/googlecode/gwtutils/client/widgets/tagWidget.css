@@ -2,6 +2,7 @@
 	border: 1px solid #ccc;
 	min-height: 24px;
 	text-align: left;
+	background-color: white;
 }
 
 .container>div {

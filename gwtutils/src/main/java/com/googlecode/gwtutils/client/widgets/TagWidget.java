@@ -40,7 +40,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 	private final SuggestBox addTextBox;
 	private final SimplePanel addBox = new SimplePanel();
 
-	public static interface Style extends CssResource {
+	public interface Style extends CssResource {
 		String container();
 
 		String addText();
@@ -52,7 +52,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 		String tagDeleteButton();
 	}
 
-	public static interface Bundle extends ClientBundle {
+	public interface Bundle extends ClientBundle {
 		Style tagWidget();
 	}
 
@@ -186,7 +186,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 	}
 
 	private void assertOracle() {
-		assert (oracle != null) : "Suggestions needs the default-constructor. Otherwise build your own Oracle";
+		assert oracle != null : "Suggestions needs the default-constructor. Otherwise build your own Oracle";
 	}
 
 	public void clearSuggestions() {

@@ -24,6 +24,7 @@ package com.googlecode.gwtutils.server.util;
  * @author Sandy Gao
  * @version $Id: Base64.java,v 1.2.6.1 2005/09/06 11:44:40 neerajbj Exp $
  */
+@SuppressWarnings("PMD")
 public final class Base64 {
 
   static private final int BASELENGTH = 128;

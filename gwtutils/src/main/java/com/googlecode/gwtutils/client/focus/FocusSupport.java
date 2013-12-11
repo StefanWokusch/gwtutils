@@ -15,7 +15,7 @@ import com.google.gwt.user.client.ui.IsWidget;
  * It will set the focus by clicking on the Widget, and blur by clicking anywhere else
  */
 public class FocusSupport {
-	public static interface HasFocus extends IsWidget {
+	public interface HasFocus extends IsWidget {
 		void onFocusChanged(boolean focus);
 	}
 

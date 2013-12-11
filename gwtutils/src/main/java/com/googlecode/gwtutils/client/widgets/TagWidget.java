@@ -128,6 +128,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 					ValueChangeEvent.fire(TagWidget.this, value);
 					refersh();
 				}
+				refreshTextBoxSize();
 			}
 		});
 
@@ -236,6 +237,7 @@ public class TagWidget extends Composite implements HasValue<String> {
 						int end = start + tag.length();
 						int maxLen = value.length();
 						value = value.substring(0, start) + (end == maxLen ? "" : value.substring(end + 1, maxLen));
+						ValueChangeEvent.fire(TagWidget.this, value);
 						refersh();
 					}
 				}, ClickEvent.getType());
@@ -253,6 +255,11 @@ public class TagWidget extends Composite implements HasValue<String> {
 	private void focus() {
 		addBox.setWidget(addTextBox);
 		addTextBox.setFocus(true);
+		refreshTextBoxSize();
+	}
+
+	private void refreshTextBoxSize() {
+		addTextBox.setWidth(20 + addTextBox.getValue().length() * 10 + "px");
 	}
 
 }

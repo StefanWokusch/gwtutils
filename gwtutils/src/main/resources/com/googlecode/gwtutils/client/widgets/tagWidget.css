@@ -3,6 +3,7 @@
 	min-height: 24px;
 	text-align: left;
 	background-color: white;
+	cursor: text;
 }
 
 .container>div {
@@ -11,16 +12,14 @@
 
 .container input {
 	border: none;
-	width: 200px;
 	padding: 2px 10px 3px 5px;
 	margin: 0px;
+	overflow: visible;
 }
 
 .addText {
-	cursor: pointer;
 	padding: 2px 5px;
 	font-size: 13px;
-	width: 200px;
 }
 
 .tag {

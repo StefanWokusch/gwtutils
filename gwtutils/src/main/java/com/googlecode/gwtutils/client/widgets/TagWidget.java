@@ -3,6 +3,8 @@ package com.googlecode.gwtutils.client.widgets;
 import java.util.Collection;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.BlurHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -110,7 +112,6 @@ public class TagWidget extends Composite implements HasValue<String> {
 				addTextBox.setValue("");
 			}
 		});
-
 		addTextBox.addKeyDownHandler(new KeyDownHandler() {
 			private long last = System.currentTimeMillis();
 
@@ -259,7 +260,13 @@ public class TagWidget extends Composite implements HasValue<String> {
 	}
 
 	private void refreshTextBoxSize() {
-		addTextBox.setWidth(20 + addTextBox.getValue().length() * 10 + "px");
+		// Do this asyn because of Paste event
+		Scheduler.get().scheduleDeferred(new ScheduledCommand() {
+			@Override
+			public void execute() {
+				addTextBox.setWidth(20 + addTextBox.getValue().length() * 10 + "px");
+			}
+		});
 	}
 
 }
